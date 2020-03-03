@@ -1,0 +1,31 @@
+.elementor-7449 .elementor-element.elementor-element-72d7d90 > .elementor-container{min-height:526px;}.elementor-7449 .elementor-element.elementor-element-72d7d90 > .elementor-container:after{content:"";min-height:inherit;}.elementor-7449 .elementor-element.elementor-element-72d7d90:not(.elementor-motion-effects-element-type-background), .elementor-7449 .elementor-element.elementor-element-72d7d90 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:url("../../2019/12/UN-Women-Samir-Jung-Thapa-NEPAL-Earthquake-3-1.jpg");background-position:top right;background-repeat:no-repeat;background-size:cover;}.elementor-7449 .elementor-element.elementor-element-72d7d90{transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;margin-top:0px;margin-bottom:0px;padding:0px 0px 0px 0px;}.elementor-7449 .elementor-element.elementor-element-72d7d90 > .elementor-background-overlay{transition:background 0.3s, border-radius 0.3s, opacity 0.3s;}.elementor-7449 .elementor-element.elementor-element-8842cef.column-bg-skew-right{padding-right:40px;}.elementor-7449 .elementor-element.elementor-element-8842cef.column-bg-skew-left{padding-left:40px;}.elementor-7449 .elementor-element.elementor-element-8842cef > .elementor-element-populated{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;}.elementor-7449 .elementor-element.elementor-element-d07f5e5{padding:0px 0px 0px 0px;}.elementor-7449 .elementor-element.elementor-element-34e0eed.column-bg-skew-right{padding-right:40px;}.elementor-7449 .elementor-element.elementor-element-34e0eed.column-bg-skew-left{padding-left:40px;}.elementor-7449 .elementor-element.elementor-element-f3ae8a2.column-bg-skew-right{padding-right:40px;}.elementor-7449 .elementor-element.elementor-element-f3ae8a2.column-bg-skew-left{padding-left:40px;}.elementor-7449 .elementor-element.elementor-element-374f34b > .elementor-widget-container{padding:20px 20px 20px 20px;background-color:#ffffff;}/* Start custom CSS for text-editor, class: .elementor-element-374f34b */.BBFormSignupFieldWide{
+    float: none;
+    width: 100% !important;
+}
+[data-bbox-part-id='1b45ded5-5c2b-4ef5-83a8-6220bd8a8452'].BBFormContainer .BBFormTextbox {
+    width: 100% !important;
+    height: 35px !important;
+    margin: 2px 0 !important;
+}
+.BBFormContainer[data-bbox-part-id="1b45ded5-5c2b-4ef5-83a8-6220bd8a8452"] .BBFormSubmitbutton {
+background-color: #009EDC !important;
+    border-radius: 0 !important;
+    margin-top: 10px !important;
+}
+.page-id-7449 .container-layout-content.container {
+    margin-bottom: 0 !important;
+}
+input::placeholder{
+    color: #333333 !important;
+    font-size: 14px;
+    text-transform: capitalize;
+    padding-left: 10px;
+}
+label.BBFormFieldLabelEdit{
+    font-family: Montserrat !important;
+    font-weight: 500;
+}
+span.BBFormFieldLabelEdit{
+    font-family: "Calbri", Sans-serif !important;
+    font-size: 14px;
+}/* End custom CSS */

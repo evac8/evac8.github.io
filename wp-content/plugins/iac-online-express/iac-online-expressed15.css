@@ -1,0 +1,580 @@
+/*
+ * Hide appropriate parts of the initial form
+ */
+.iac-container .BBFormSection.BBFormSectionRecurrenceInfo > fieldset > legend,
+.iac-container .BBFormSection.BBDFormSectionBillingInfo,
+.iac-container .BBFormSection.BBFormSectionGiftAttributes,
+.iac-container .BBFormSection.BBDFormSectionPaymentInfo,
+.iac-container .BBFormSection.BBFormButtonRow,
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormSection.BBFormButtonRow .BBFormFieldLabel.BBFormSummaryTotal {
+  display: none;
+}
+
+
+/*
+ * Root Container
+ */
+.iac-container {
+  max-width: 600px;
+  padding-top: 0;
+  margin: 0 auto;
+}
+
+
+/*
+ * Loading Spinner
+ */
+.iac-container #bbox-msg-wrapper > img {
+  display: none;
+}
+.iac-container #bbox-msg {
+  display: none;
+}
+
+
+/*
+ * Navigation tabs
+ */
+.iac-container .iac-tabs {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.iac-container .iac-tab {
+  width: 50%;
+  background-color: #F3F3F3;
+  border-radius: 12px 12px 0 0;
+  margin: 0 1px;
+}
+.iac-container .iac-tab:first-of-type {
+  margin-left: 0;
+}
+.iac-container .iac-tab:last-of-type {
+  margin-right: 0;
+}
+.iac-container .iac-tab.iac-tab-active {
+  background-color: #ffffff;
+}
+.iac-container .iac-tab a {
+  display: block;
+  padding: 10px 10px 8px;
+  color: #000000;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.25s ease;
+}
+.iac-container .iac-tab a:hover {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.iac-container .iac-tab.iac-tab-active a {
+  padding-bottom: 10px;
+}
+.iac-container .iac-tab.iac-tab-active a:hover {
+  background-color: transparent;
+}
+
+
+/*
+ * Root Form Containers
+ */
+.iac-container .iac-forms {
+  clear: both;
+  background-color: #ffffff;
+  padding-top: 1px;
+}
+.iac-container #iac-frequency-container {
+  display: none;
+}
+
+
+/*
+ * Frequency Controls
+ */
+.iac-container .iac-frequency-label {
+  display: none;
+  text-align: center;
+  padding: 20px 0 5px;
+  margin: 0;
+  color: darkslategray;
+}
+.iac-container .iac-frequency-container {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 0 2px;
+}
+.iac-container .iac-frequency {
+  display: flex;
+  flex-direction: row;
+  padding: 1px;
+  border-radius: 100vh;
+  background-color: #67B8E6;
+}
+.iac-container .iac-frequency > a {
+  position: relative;
+  display: block;
+  margin: 1px;
+  padding: 9px 12px 7px;
+  border-radius: 100vh;
+  color: #000000;
+  text-decoration: none;
+  transition: background-color 0.25s ease;
+  text-transform: capitalize;
+}
+.iac-container .iac-frequency > a:hover {
+  background-color: rgba(255, 183, 83, 0.15);
+}
+.iac-container .iac-frequency > a.iac-frequency-active {
+  background-color: #009DDC;
+  color: #ffffff;
+}
+.iac-container .iac-frequency > a.iac-frequency-active:hover {
+  background-color: rgba(0, 0, 0, 0, 0.5);
+}
+.iac-container .iac-frequency > a[href="#regularly"]::after {
+  position: absolute;
+  left: 48%;
+  bottom: 0px;
+  width: 6px;
+  height: 0px;
+  background-color: #67B8E6;
+  content: "";
+  transition: height 0.25s linear, bottom 0.25s linear;
+  border-left: 2px solid #009DDC;
+  border-right: 2px solid #009DDC;
+}
+.iac-container .iac-frequency > a[href="#regularly"].iac-frequency-active::after {
+  height: 12px;
+  bottom: -12px;
+}
+
+
+/*
+ * Inherited Form Container
+ */
+
+.iac-container #bboxdonation_BBEmbeddedForm {
+  padding: 0;
+}
+.iac-container #bboxdonation_BBEmbeddedForm:after {
+  content: "";
+  display: block;
+  height: 1px;
+}
+
+
+/*
+ * Form Error Notice
+ */
+.iac-container #divError,
+.iac-container #divClientError {
+  margin: 30px 30px 10px;
+  background-color: lightyellow;
+  border: none;
+  border-left: 5px solid darkorange;
+  color: darkslategray;
+  font-weight: 500;
+  border-radius: 2px;
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormErrorItem,
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormClientErrorItem {
+  margin: 0 0 10px;
+  padding: 0;
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormServerErrorItem:last-of-type,
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) li.BBFormClientErrorItem:last-of-type {
+  margin-bottom: 0;
+}
+
+
+/*
+ * Form Layout
+ */
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormSection {
+  margin: 0;
+  padding: 10px 30px 10px 30px;
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormSection.BBFormButtonRow {
+  padding-top: 10px;
+}
+@media (max-width: 600px) {
+  .iac-container #divError,
+  .iac-container #divClientError {
+    margin: 30px 10px 10px;
+  }
+  .iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormSection {
+    padding: 30px 10px 10px;
+  }
+  .iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormSection.BBFormButtonRow {
+    padding-top: 10px;
+  }
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormSectionRecurrenceInfo {
+  padding: 0 10px;
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormSection > fieldset > legend {
+  margin: 0 0 10px;
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormSectionHeading {
+  padding: 0 0 5px;
+  margin: 0;
+  font-weight: 600;
+  color: #000000;
+  border-bottom: 1px solid white;
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormFieldContainer {
+  margin: 0 0 10px;
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormButtonRow .BBFormFieldContainer {
+  margin: 0;
+}
+
+
+/*
+ * Form Inputs
+ */
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormTextbox,
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormTextArea,
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormSelectList {
+  border: none;
+  padding: 0 5px;
+  line-height: 20px;
+  opacity: 1;
+  color: darkslategray;
+  height: auto;
+  min-height: 40px;
+  margin-right: 0;
+  border-radius: 2px;
+  max-width: none;
+  text-indent: 0;
+  border: 1px solid #cccccc;
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormTextArea {
+  min-height: 100px;
+  padding: 10px 5px;
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormSelectList {
+  width: auto;
+  max-width: 100%;
+  -webkit-appearance: none;
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormSelectList.GhostText:not(:focus) {
+  color: darkslategray;
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormChecklist {
+  border-width: 0;
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBTwoFields .BBFormSelectList {
+  width: 40%;
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBThreeFields .BBFormSelectList {
+  width: 18%;
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBThreeFields .BBFormTextbox {
+  width: 38%;
+}
+@media (max-width: 600px) {
+  .iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBThreeFields .BBFormSelectList {
+    width: auto;
+  }
+  .iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBThreeFields .BBFormTextbox {
+    width: 100%;
+  }
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormChecklistItem {
+  padding: 0;
+  color: white;
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormFieldLabel {
+  font-weight: 300;
+  color: #333333;
+	font-weight:bold;
+  width: auto;
+  padding-right: 0;
+  float: none;
+  text-align: left;
+  margin-left: 0;
+  line-height: normal;
+  padding-bottom: 5px;
+}
+
+
+/*
+ * Inline Form Errors
+ */
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormErrorBlock.BBFormInlineError,
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormErrorBlock.BBFormInlineError.BBFieldExpiration {
+  padding: 0;
+  border-width: 0;
+  background-color: transparent;
+  border-radius: 2px;
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormInlineErrorItem {
+  margin: 2px 0 0;
+  background-color: lightyellow;
+  border-left: 5px solid darkorange;
+  padding: 5px;
+  color: darkslategray;
+  font-weight: 500;
+  font-style: normal;
+  border-radius: 2px;
+}
+
+
+/*
+ * Inherited Frequency Controls
+ */
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormSectionRecurrenceInfo .BBFormFieldContainer {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormFieldRecurrenceInfo {
+  padding: 0;
+  color: darkslategray;
+}
+.iac-container #bboxdonation_recurrence_divRecurrenceInfo {
+  border: 2px solid #000000;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormFieldRecurrenceInfo .BBRecurrenceFieldContainer {
+  margin-top: 0;
+}
+.iac-container #lblRecurrenceNextGiftDate {
+  color: darkslategray;
+}
+@media (max-width: 600px) {
+  .iac-container #lblRecurrenceNextGiftDate {
+    font-size: 0.8rem;
+  }
+}
+.iac-container #bboxdonation_recurrence_divRecurrenceCheckbox {
+  display: none;
+}
+@media (max-width: 600px) {
+  .iac-container #bboxdonation_recurrence_ddFrequency {
+    display: none;
+  }
+}
+
+
+/*
+ * Continue and Submit buttons
+ */
+.iac-container .iac-action {
+  display: none;
+  clear: both;
+}
+.iac-container .iac-action,
+[id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFormSection.BBFormButtonRow > .BBFormFieldContainer {
+  text-align: center;
+}
+.iac-container .iac-action a,
+.iac-container #bboxdonation_btnSubmit {
+  -webkit-appearance: none;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: #009DDC;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  transition: background-color 0.25s ease;
+  box-shadow: none;
+  white-space: normal;
+}
+.iac-container .iac-action a:hover,
+.iac-container #bboxdonation_btnSubmit:hover {
+  text-decoration: none;
+  background-color: #000000;
+  color:#ffffff;
+}
+.iac-container .iac-action a {
+  margin: 10px;
+}
+
+
+/*
+ * Credit Card
+ */
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFieldExpiration,
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFieldSecurityCode {
+  float: none;
+}
+.iac-container #DCCreditType {
+  margin: 0;
+}
+.iac-container #DCCreditType .BBFormFieldLabel {
+  display: block;
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFieldSecurityCode {
+  min-width: 0;
+}
+.iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFieldSecurityCode .BBFormFieldLabel {
+  width: 100%;
+  margin-left: 0;
+}
+@media (max-width: 600px) {
+  .iac-container [id*="bbox"] [id*="bbox"].BBFormContainer:not(override) .BBFieldSecurityCode .BBFormFieldLabel {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+
+/*
+ * Amount Selection
+ */
+.iac-container #bboxdonation_gift_lblGivingLevels {
+  display: none;
+}
+.iac-container #bboxdonation_gift_rdlstGivingLevels {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.iac-container #bboxdonation_gift_rdlstGivingLevels .BBFormRadioGivingLevelItem.iac-giving-level-item-regularly {
+  width: 50%;
+}
+.iac-container #bboxdonation_gift_rdlstGivingLevels .BBFormRadioGivingLevelItem.iac-giving-level-item-regularly:nth-of-type(even) {
+  padding-right: 5px;
+}
+.iac-container #bboxdonation_gift_rdlstGivingLevels .BBFormRadioGivingLevelItem.iac-giving-level-item-regularly:nth-of-type(odd) {
+  padding-left: 5px;
+}
+.iac-container #bboxdonation_gift_rdlstGivingLevels .BBFormRadioGivingLevelItem .BBFormRadioButtonContainer {
+
+}
+.iac-container #bboxdonation_gift_rdlstGivingLevels .BBFormRadioGivingLevelItem .BBFormRadioButtonContainer .BBFormRadioLabelGivingLevel {
+  background-color: rgb(255, 255, 255);
+  border-color: #cccccc;
+  color: darkslategray;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 14px 10px;
+  margin: 0 0 10px 0;
+  float: none;
+}
+.iac-container #bboxdonation_gift_rdlstGivingLevels .BBFormRadioGivingLevelItem.iac-giving-level-item-regularly .BBFormRadioButtonContainer .BBFormRadioLabelGivingLevel,
+.iac-container #bboxdonation_gift_rdlstGivingLevels .BBFormRadioGivingLevelItem.iac-giving-level-item-other .BBFormRadioButtonContainer .BBFormRadioLabelGivingLevel {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.iac-container #bboxdonation_gift_rdlstGivingLevels .BBFormRadioGivingLevelItem .BBFormRadioButtonContainer .BBFormRadioLabelGivingLevel.BBFormRadioLabelGivingLevelSelected {
+  background-color: #009DDC;
+  color: #ffffff;
+}
+.iac-container #bboxdonation_gift_rdlstGivingLevels .BBFormRadioGivingLevelItem .BBFormRadioButtonContainer .BBFormRadioLabelGivingLevel.BBFormRadioLabelGivingLevelNotSelected {
+
+}
+.iac-container #bboxdonation_gift_rdlstGivingLevels .BBFormRadioGivingLevelItem .BBFormRadioButtonContainer .BBFormRadioLabelGivingLevel.BBFormRadioLabelGivingLevelNotSelected:hover {
+  background-color: rgba(103, 184, 230, 0.4);
+}
+.iac-container #bboxdonation_gift_rdlstGivingLevels .BBFormRadioGivingLevelItem.iac-giving-level-item-onceoff .BBFormRadioButtonContainer .BBFormRadioLabelGivingLevel .BBFormRadioDescription {
+  max-width: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  float: none;
+  width: 75%;
+  font-weight: 400;
+}
+.iac-container #bboxdonation_gift_rdlstGivingLevels .BBFormRadioGivingLevelItem.iac-giving-level-item-regularly .BBFormRadioButtonContainer .BBFormRadioLabelGivingLevel .BBFormRadioDescription {
+  display: none;
+}
+.iac-container #bboxdonation_gift_rdlstGivingLevels .BBFormRadioGivingLevelItem.iac-giving-level-item-other .BBFormRadioButtonContainer .BBFormRadioLabelGivingLevel .BBFormRadioDescriptionOther {
+  padding: 0;
+  text-align: center;
+  width: 25%;
+  font-weight: 600;
+  color: #000000;
+  font-size: 1.2em;
+}
+.iac-container #bboxdonation_gift_rdlstGivingLevels .BBFormRadioGivingLevelItem.iac-giving-level-item-other .BBFormRadioButtonContainer .BBFormRadioLabelGivingLevel.BBFormRadioLabelGivingLevelSelected .BBFormRadioDescriptionOther {
+  color: white;
+}
+.iac-container #bboxdonation_gift_txtAmountOther {
+  width: 75%;
+  margin: 0;
+  font-size: 1.2em;
+  padding: 0 5px;
+  color: darkslategray;
+}
+.iac-container #bboxdonation_gift_rdlstGivingLevels .BBFormRadioGivingLevelItem .BBFormRadioButtonContainer .BBFormRadioLabelGivingLevel .BBFormRadioAmount {
+  min-width: 0;
+  padding: 0;
+  margin: 0 10px 0 0;
+  display: block;
+  float: none;
+  text-align: center;
+  width: 25%;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.iac-container #bboxdonation_gift_rdlstGivingLevels .BBFormRadioGivingLevelItem .BBFormRadioButtonContainer .BBFormRadioLabelGivingLevel.BBFormRadioLabelGivingLevelNotSelected .BBFormRadioAmount {
+  color: #333333;
+}
+.iac-container #bboxdonation_gift_rdlstGivingLevels .BBFormRadioGivingLevelItem.iac-giving-level-item-regularly .BBFormRadioButtonContainer .BBFormRadioLabelGivingLevel .BBFormRadioAmount {
+  width: 100%;
+  margin: 0;
+}
+
+
+/*
+ * Thank You Message
+ */
+.iac-container #bboxdonation_divThanks {
+  padding: 10px 30px 20px 30px;
+  margin: 30px;
+  background-color: white;
+  border: none;
+  border-left: 5px solid darkorange;
+  color: darkslategray;
+  font-weight: 500;
+  border-radius: 2px;
+}
+@media (max-width: 600px) {
+  .iac-container #bboxdonation_divThanks {
+    margin: 30px 10px;
+  }
+}
+.iac-container #bboxdonation_divThanks span {
+  font-size: 1em !important;
+  color: inherit !important;
+  font-family: inherit !important;
+  line-height: 1.6em;
+}
+.iac-container #bboxdonation_divThanks span strong {
+  font-weight: 600;
+}
+.iac-container #bboxdonation_divThanks .BBFormConfirmationTransactionDetails {
+  padding: 10px 14px;
+  border-radius: 2px;
+  background-color: rgb(240,240,240);
+}
+.iac-container{
+	box-shadow: 5px 23px 20px #cccccc;
+}
+
+/*
+ * General Mobile Helper
+ */
+.btn-paypal{
+	background-color: #009DDC !important;
+	color:#ffffff;
+}
+@media (max-width: 600px) {
+  .iac-container .iac-mobile-hide {
+    display: none;
+  }
+}
